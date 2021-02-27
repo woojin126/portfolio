@@ -151,9 +151,13 @@ p{
 .section{
     padding:50px;
     text-align: center; 
-    max-width: 1200px; /* 최대로 넓힐수있는 너비 (이것만하면 요소가 움직이지 않으수있는데.
-                         이럴떈 요소검사로 패딩 마진 확인! */
     margin: 0 auto;
+   
+}
+.section__container{
+    max-width: 1200px; /* 최대로 넓힐수있는 너비 (이것만하면 요소가 움직이지 않으수있는데.
+    이럴떈 요소검사로 패딩 마진 확인! */ 
+    margin: auto;
 }
 
 /* About */
@@ -209,4 +213,55 @@ p{
 }
 .job__period{
     font-size: var(--font-micro);
+}
+
+/* skiil */
+#skills{
+    background-color: var(--color-yellow);/* 양쪽으로 넓힐떄 양쪽에 빈공간이있는이유 아까 위에서
+                                            1200px라고 너비를 지정해서 그럼 좀더 세세히 다시정의 하러 가자 */
+}
+
+.skillset{
+    display: flex;
+    background-color: var(--color-light-grey);
+    color: var(--color-light-white);
+    margin: 20px 0;
+}
+
+.skillset__title{
+    color: var(--color-white);
+}
+.skillset__left{
+    flex-basis: 60%;
+    background-color: var(--color-dark-grey);
+    padding: 0px 40px;
+}
+.skill__description{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding: 10px;
+    
+}
+
+.skill__bar{
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey);
+}
+.skill__value{
+    width: 70%;
+    height: 3px;
+    background-color: var(--color-orange);
+}
+.skillset__right{
+    flex-basis: 40%;
+}
+.tools{
+    background-color: var(--color-grey);
+}
+
+.tools,
+.etc{
+    padding: 20px;
 }
