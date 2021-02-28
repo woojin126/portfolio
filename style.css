@@ -36,7 +36,7 @@
 /* Universal tag */
 *{
     box-sizing:border-box;
-    margin:0 20px;
+   
 }
 
 body{
@@ -159,7 +159,7 @@ p{
 .section__container{
     max-width: 1200px; /* 최대로 넓힐수있는 너비 (이것만하면 요소가 움직이지 않으수있는데.
     이럴떈 요소검사로 패딩 마진 확인! */ 
-    margin: auto;
+    margin:0 auto;
 }
 
 /* About */
@@ -178,6 +178,7 @@ p{
     border:1px solid var(--color-blue);
     border-radius: 50%;
     margin-bottom: 16px;
+    margin: 0 auto;
 
 }
 .major__icon i{
@@ -364,52 +365,49 @@ p{
     height: 2px;
     background-color: var(--color-dark-white);
 }
-
 /* Testimonial */
-#testimonials{
+#testimonials {
     background-color: var(--color-light-white);
-   
-}
-
-.testimonials{
     
-    margin:40px;
-    
-}
-
-.testimonial{
-    display:flex;
+  }
+  
+  .testimonials {
+    margin: 40px;
+  }
+  
+  .testimonial {
+    display: flex;
     margin: 32px 0;
-}
-
-.testimonial__avatar{
+  }
+  
+  .testimonial__avatar {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-   
-}
-
-.testimonial__avatar:nth-child(odd){
-    margin-right: 0px;
-}
-
-.testimonial__avatar:nth-child(even){
+  }
+  
+  .testimonial__avatar:nth-child(odd) {
+    margin-right: 40px;
+  }
+  
+  .testimonial__avatar:nth-child(even) {
     margin-left: 40px;
-}
-.testimonial__speech-bubble{
+  }
+  
+  .testimonial__speech-bubble {
     padding: 18px;
     background-color: var(--color-white);
     border-radius: var(--size-border-radius);
-}
-
-.testimonial__speech-bubble p {
+  }
+  
+  .testimonial__speech-bubble p {
     color: var(--color-light-grey);
-}
-
-.testimonial__speech-bubble a{
+  }
+  
+  .testimonial__speech-bubble a {
     color: var(--color-pink);
-}
-
+  }
+  
 /* Contact */
 
 #contact {
@@ -436,4 +434,55 @@ p{
 .contact__links i:hover{
     transform: scale(1.1);
     color: var(--color-yellow);
+}
+
+.navbar__toggle-btn{
+    position:absolute;
+    top:24px;
+    right:32px;
+    font-size: 24px;
+    color: var(--color-white);
+    display: none; /* 햄버거 버튼을 가리자 평소엔 */
+}
+@media screen and (max-width:768px){
+ .navbar__toggle-btn{
+     display: block;
+ }
+ #Navbar {
+     flex-direction: column; /* 중심축을 column 수직으로 해놨으니 */
+     align-items: flex-start; /* 반대축은 align-items 로~ */
+ }
+
+ .navbar__menu{
+     flex-direction: column;
+     text-align: center;
+     width: 100%; /* 너비 조정을 해줘야 가운데 정렬 */
+     display: none; /* 일단 가려놓자 클릭하면 보일수 있도록 */
+     
+ }
+
+ .about__majors{
+     flex-direction: column;
+ }
+
+ .major{
+     margin-bottom: 30px;
+ }
+
+ .skillset{
+     flex-direction: column;
+ }
+
+ .project{
+     flex-grow: 1;/* 화면이작으면 딱맞게커지도록함 */
+ }
+
+ .testimonial{
+     flex-direction:column;
+ }
+
+ .testimonial__speech-bubble p {
+    color: var(--color-light-grey);
+    word-break:break-all;/* 박스밖으로 나가는 text 안으로넣어준다! */
+  }
 }
