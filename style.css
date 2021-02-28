@@ -36,6 +36,7 @@
 /* Universal tag */
 *{
     box-sizing:border-box;
+    margin:0 20px;
 }
 
 body{
@@ -152,6 +153,7 @@ p{
     padding:50px;
     text-align: center; 
     margin: 0 auto;
+ 
    
 }
 .section__container{
@@ -265,3 +267,177 @@ p{
 .etc{
     padding: 20px;
 }
+
+/* Work__categories */
+.work__categories{
+    margin: 40px;
+}
+.category__btn{
+    border: 1px solid var(--color-dark-white);
+    border-radius: var(--size-border-radius);
+    font-size: var(--font-regular);
+    padding: 8px 48px;
+    margin: 0;
+    
+}
+
+.category__btn.active,
+.category__btn:hover{
+    background-color: var(--color-pink);
+    color: var(--color-white);
+}
+
+.category__count{
+    background-color: var(--color-orange);
+    border-radius: 50%;
+    color: var(--color-white);
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    display: inline-block;/* 숫자 잘보이게 하려고 span 속성은 꽉꽉채워서 찌부시킬수잇어서 인라인블럭 */
+    position: relative;
+    top: -20px;
+    left: 4px;
+    opacity: 0;
+    transition: all var(--animation-duration) ease-in;
+}
+
+.category__btn:hover .category__count{
+    opacity: 10;
+    top: 0;
+}
+
+.work__projects{
+    display: flex;
+    flex-wrap: wrap; /* 자리가 꽉차면 자동으로 줄바꿈 */
+    justify-content: center;
+  
+ 
+   
+}
+
+.project{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 250px;
+    margin: 2px;
+    background-color: var(--color-light-white);
+}
+
+.project__img{
+    max-width: 100%;
+    max-height: 90%;
+}
+.project__description{
+    position: absolute; /* description의 부모는 project 클래스인데 기본 static이면  position 이라
+                            body를기준으로 맨위 왼쪽에 붙어있게됨 */
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(10px);/* 위로 올라가는느낌 주자 */
+    transition: all 500ms ease-in;
+}
+
+.project:hover .project__description{
+    opacity: 0.8;
+    transform: translateY(0px);
+}
+.project__description h3{
+    color: var(--color-white);
+}
+.project__description h3:after{
+    content: '';
+    display: block;
+    position: relative;
+    left: 50%;
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-dark-white);
+}
+
+/*
+.work__categories{
+    margin:20px 0;
+}
+.category__btn{
+    
+    border: 1px solid var(--color-light-white);
+    padding: 10px;
+    width: 200px;
+    border-radius: var(--size-border-radius);
+    font-weight: var(--weight-bold);
+}
+.category__btn button{
+  
+    transition: all var(--animation-duration) ease;
+   
+}
+.category__btn:hover{
+    background-color: var(--color-pink);
+    cursor: pointer;
+    color:var(--color-white);
+}
+
+.work__projects{
+    display: flex;
+    justify-content: center;
+   
+}
+.work__projects img{
+    width: 300px;
+}
+.work__projects a{
+    background-color: var(--color-dark-white);
+    margin-right: 2px;
+    margin-bottom: 2px;
+    padding: 20px;
+    width: 1000px;
+}
+
+#testimonials{
+    background-color: var(--color-dark-white);
+   
+  
+}
+.testimonial{
+    display: flex;
+    align-items: center;
+}
+
+.testimonials div:first-child .testimonial__speech-bubble{
+    margin-left: 100px;
+    background-color: var(--color-light-white);
+}
+
+
+.testimonial__speech-bubble p{
+    font-size: 30px;
+}
+
+.testimonial__speech-bubble >p >a{
+    color: var(--color-dark-pink)
+}
+
+.testimonial img {
+    border-radius: 50%;
+}
+.testimonial:nth-child(2){
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.testimonials div:last-child .testimonial__speech-bubble{
+    margin-right: 100px;
+    background-color: var(--color-light-white);
+}
+*/
