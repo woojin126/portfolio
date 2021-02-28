@@ -398,6 +398,8 @@ p{
     padding: 18px;
     background-color: var(--color-white);
     border-radius: var(--size-border-radius);
+  
+ 
   }
   
   .testimonial__speech-bubble p {
@@ -408,6 +410,20 @@ p{
     color: var(--color-pink);
   }
   
+  .testimonials .testimonial:nth-child(2) img{
+      margin-left:40px;
+  }
+
+  .testimonials .testimonial:nth-child(1){
+    display: flex;
+    flex-direction:row  ;
+}
+  .testimonials .testimonial:nth-child(2){
+      display: flex;
+      flex-direction:row-reverse  ;
+  }
+
+
 /* Contact */
 
 #contact {
@@ -484,5 +500,7 @@ p{
  .testimonial__speech-bubble p {
     color: var(--color-light-grey);
     word-break:break-all;/* 박스밖으로 나가는 text 안으로넣어준다! */
-  }
+    
+}
+
 }
