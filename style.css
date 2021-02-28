@@ -406,79 +406,31 @@ p{
 .testimonial__speech-bubble a{
     color: var(--color-pink);
 }
-/*
-.work__categories{
-    margin:20px 0;
-}
-.category__btn{
-    
-    border: 1px solid var(--color-light-white);
-    padding: 10px;
-    width: 200px;
-    border-radius: var(--size-border-radius);
-    font-weight: var(--weight-bold);
-}
-.category__btn button{
-  
-    transition: all var(--animation-duration) ease;
-   
-}
-.category__btn:hover{
+
+/* Contact */
+
+#contact {
     background-color: var(--color-pink);
-    cursor: pointer;
-    color:var(--color-white);
 }
 
-.work__projects{
-    display: flex;
-    justify-content: center;
-   
+.contact__title,
+.contact__email,
+.contact__rights{
+    color: var(--color-white);
 }
-.work__projects img{
-    width: 300px;
-}
-.work__projects a{
-    background-color: var(--color-dark-white);
-    margin-right: 2px;
-    margin-bottom: 2px;
-    padding: 20px;
-    width: 1000px;
+.contact__title{
+    margin:32px 0;
 }
 
-#testimonials{
-    background-color: var(--color-dark-white);
-   
-  
+.contact__links{
+    font-size: var(--font-large);
+    margin: 24px 0;
+    
 }
-.testimonial{
-    display: flex;
-    align-items: center;
+.contact__links i{
+    transition: all var(--animation-duration) ease-in;
 }
-
-.testimonials div:first-child .testimonial__speech-bubble{
-    margin-left: 100px;
-    background-color: var(--color-light-white);
+.contact__links i:hover{
+    transform: scale(1.1);
+    color: var(--color-yellow);
 }
-
-
-.testimonial__speech-bubble p{
-    font-size: 30px;
-}
-
-.testimonial__speech-bubble >p >a{
-    color: var(--color-dark-pink)
-}
-
-.testimonial img {
-    border-radius: 50%;
-}
-.testimonial:nth-child(2){
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.testimonials div:last-child .testimonial__speech-bubble{
-    margin-right: 100px;
-    background-color: var(--color-light-white);
-}
-*/
