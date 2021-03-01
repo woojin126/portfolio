@@ -98,6 +98,7 @@ p{
     padding:16px;
     background-color: transparent;
     transition: all var(--animation-duration) ease-in;
+    z-index: 100; /* My work 사진과 겹쳐 nav가 안보이는현상때문에 적용 */
 }
 
 #Navbar.navbar--dark{
