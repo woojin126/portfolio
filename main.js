@@ -5,8 +5,8 @@ const navbarheight = navbar.getBoundingClientRect().height;
 //메뉴 선택시 그위치로 자동 스크롤링
 const navbarMenu = document.querySelector("#navbar__menu");
 const li = navbarMenu.childNodes;
-
-function MenuTransform(){
+//home 구간  Contact me 클릭시 이동.
+function ScrollMenu(){
  
    /*  console.log(li); 
     for(let i=0;i<li.length;i++){
@@ -29,8 +29,7 @@ function MenuTransform(){
        
         if(id === null)
             return;
-      
-           
+       
             const scrollTo = document.querySelector(id);
             scrollTo.scrollIntoView({behavior:"smooth"}); 
     }); 
@@ -46,7 +45,7 @@ function NavBarScroll(){
 }
 function init(){
     NavBarScroll();
-    MenuTransform();
+    ScrollMenu();
 
 }
 
