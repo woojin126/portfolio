@@ -6,6 +6,16 @@ const navbarheight = navbar.getBoundingClientRect().height;
 const navbarMenu = document.querySelector("#navbar__menu");
 const li = navbarMenu.childNodes;
 //home 구간  Contact me 클릭시 이동.
+const contactMe = document.querySelector(".home__contact");
+function ScrollContactMe(){
+    contactMe.addEventListener('click',(event)=>{
+        target = event.target;
+        id = target.dataset.id;
+
+        const scrollTo = document.querySelector(id);
+        scrollTo.scrollIntoView({behavior:"smooth"});
+    });
+}
 function ScrollMenu(){
  
    /*  console.log(li); 
@@ -46,6 +56,7 @@ function NavBarScroll(){
 function init(){
     NavBarScroll();
     ScrollMenu();
+    ScrollContactMe();
 
 }
 
