@@ -3,13 +3,20 @@
 const navbar = document.querySelector("#Navbar");
 const navbarheight = navbar.getBoundingClientRect().height;
 
+
+
+
+function NavBarScroll(){
+    window.addEventListener('scroll',() =>{
+        if(window.scrollY > navbarheight)
+        navbar.classList.add('navbar--dark');
+       else
+       navbar.classList.remove('navbar--dark')
+     });
+}
 function init(){
-  window.addEventListener('scroll',() =>{
-     if(window.scrollY > navbarheight)
-     navbar.classList.add('navbar--dark');
-    else
-    navbar.classList.remove('navbar--dark')
-  });
+    NavBarScroll();
+
 
 }
 
