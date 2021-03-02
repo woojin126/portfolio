@@ -131,14 +131,16 @@ p{
 }
 
 /* Home */
-#home {
-    
+#home {  
     padding-top: 100px;
     background: url('image/homebackground.png') center/cover no-repeat;
     padding:40px;
     text-align: center;
     
 }
+
+
+
 
 .home_avatar{
     width: 250px;

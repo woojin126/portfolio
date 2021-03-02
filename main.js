@@ -7,6 +7,10 @@ const navbarMenu = document.querySelector("#navbar__menu");
 const li = navbarMenu.childNodes;
 //home 구간  Contact me 클릭시 이동.
 const contactMe = document.querySelector(".home__contact");
+//home 구간 FADE IN
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+
 
 
 function scrollIntoView(selector){
@@ -51,6 +55,7 @@ function ScrollMenu(){
     }); 
     }
 
+
 function NavBarScroll(){
     window.addEventListener('scroll',() =>{
         if(window.scrollY > navbarheight)
@@ -59,11 +64,20 @@ function NavBarScroll(){
        navbar.classList.remove('navbar--dark')
      });
 }
+
+function NavBarFadeIn(){
+    window.addEventListener('scroll',()=>{
+    
+        home.style.opacity = 1 - scrollY/homeHeight;     
+        
+    });
+}
+
 function init(){
     NavBarScroll();
     ScrollMenu();
     ScrollContactMe();
-
+    NavBarFadeIn();
 }
 
 init();
