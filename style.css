@@ -86,6 +86,24 @@ p{
     margin:4px 0;
 }
 
+.arrow-up{
+    position: fixed;
+    bottom:50px;
+    right:50px;
+    font-size: 50px;
+    background-color: steelblue;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none; /* 포인터 안보이게가능 */
+    transition: all var(--animation-duration) ease-in;
+   
+}
+
+.arrow-up.visible{
+    opacity: 1;
+    pointer-events: auto;
+}
 /* Navbar */
 #Navbar{
     width: 100%;
@@ -519,5 +537,6 @@ p{
     word-break:break-all;/* 박스밖으로 나가는 text 안으로넣어준다! */
     
 }
+
 
 }

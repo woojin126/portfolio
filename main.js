@@ -10,6 +10,8 @@ const contactMe = document.querySelector(".home__contact");
 //home 구간 FADE IN
 const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
+//arrow-up button 조작
+const upBtn = document.querySelector(".arrow-up");
 
 
 
@@ -72,12 +74,33 @@ function NavBarFadeIn(){
         
     });
 }
+function ScrollUpButtonVisible(){
+    
+    document.addEventListener('scroll',()=>{
+        if(window.scrollY > homeHeight/2){        
+           upBtn.classList.add('visible');
+        }else{           
+            upBtn.classList.remove('visible');
+        }
 
+    });
+}
+
+function ArrowUp(){
+    upBtn.addEventListener('click',()=>{
+        return scrollIntoView("#home")
+        //window.scrollTo(0,0);
+        //다른방법 window.scroll
+      
+    });
+}
 function init(){
     NavBarScroll();
     ScrollMenu();
     ScrollContactMe();
     NavBarFadeIn();
+    ScrollUpButtonVisible();
+    ArrowUp();
 }
 
 init();
