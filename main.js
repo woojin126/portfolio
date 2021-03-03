@@ -12,8 +12,10 @@ const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 //arrow-up button 조작
 const upBtn = document.querySelector(".arrow-up");
-
-
+//filtering button
+const workBtnContainer = document.querySelector(".work__categories");
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll('.project');
 
 function scrollIntoView(selector){
     
@@ -94,6 +96,28 @@ function ArrowUp(){
       
     });
 }
+
+function CategoryFilter(){
+    workBtnContainer.addEventListener('click',(event)=>{
+        const filter = event.target.dataset.filter || event.target.parentNode.dataset.filter;
+        if(filter ==null){
+            return;
+        }
+        projectContainer.classList.add('anim-out');
+       
+        setTimeout(()=>{ //0.3초뒤에 위에블록을 실행해
+            projects.forEach((project)=>{ 
+                if(filter==='*' || filter === project.dataset.type){
+                    project.classList.remove('invisible');
+    
+                }else{
+                    project.classList.add('invisible');
+                } 
+            }); 
+            projectContainer.classList.remove('anim-out');
+        },300);
+    });
+}
 function init(){
     NavBarScroll();
     ScrollMenu();
@@ -101,6 +125,7 @@ function init(){
     NavBarFadeIn();
     ScrollUpButtonVisible();
     ArrowUp();
+    CategoryFilter();
 }
 
 init();
